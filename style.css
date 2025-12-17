@@ -135,21 +135,15 @@ nav a {
     margin-bottom: 50px;
 }
 
-.solucao-item img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
+.icon-placeholder {
+    font-size: 3em; /* Ajusta o tamanho do emoji/ícone de texto */
+    display: block;
+    margin-bottom: 10px;
 }
 
 .solucao-item h4 {
     color: var(--secondary-color);
     margin-bottom: 10px;
-}
-
-.caption {
-    text-align: center;
-    font-style: italic;
-    color: #6c757d;
 }
 
 /* 4. BENEFÍCIOS */
