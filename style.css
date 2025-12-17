@@ -1,0 +1,250 @@
+/* Variáveis de Cores e Fontes */
+:root {
+    --primary-color: #007bff; /* Azul forte para ação */
+    --secondary-color: #28a745; /* Verde para sucesso/segurança */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #f8f9fa;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Botões */
+.btn-primary, .btn-cta {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-cta {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.btn-cta:hover {
+    background-color: #218838;
+}
+
+
+/* 1. HEADER */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+nav a {
+    margin-left: 25px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 2. HERO SECTION */
+.hero-section {
+    background-color: #1a1a2e; /* Fundo escuro para impacto */
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section h2 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* 3. SOLUÇÃO */
+.solucao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.solucao-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.solucao-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* 4. BENEFÍCIOS */
+.beneficios-list {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.beneficios-list ul {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+}
+
+.beneficios-list li {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* 5. TECNOLOGIA */
+.tech-details {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tech-details p {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* 6. CONTATO */
+.contact-section {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.contact-section h3, .contact-section p {
+    color: white;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* 7. FOOTER */
+footer {
+    background-color: #333;
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+    .hero-section h2 {
+        font-size: 2em;
+    }
+    .beneficios-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
